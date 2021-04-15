@@ -1,0 +1,71 @@
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Invoice</title>
+		<link rel="stylesheet" href="codoassignment2.css">
+        
+	</head>
+	<body>
+		<header>
+			<h1 id = "company_name"></h1>
+			<div id = "total"></div>
+            <div id = "contact"></div>
+            <div id = "gst"></div>
+        </header>
+			<table class="meta">
+				<tr>
+					<th><span >Table No:</span></th>
+					<td><span id="Table_No"></span></td>
+				</tr>
+				<tr>
+					<th><span >Date-Time</span></th>
+					<td ><span id="timestamp"></span></td>
+				</tr>	
+			</table>
+			<table class="inventory">
+				<thead>
+					<tr>
+						<th><span >No</span></th>
+						<th><span >Item Name</span></th>
+						<th><span >Price</span></th>
+						<th><span >QTY</span></th>
+						<th><span >Amt.</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a class="cut">-</a><span contenteditable id="order_no"></span></td>
+						<td><span contenteditable id="order_name"></span></td>
+						<td><span data-prefix>Rs.</span><span id="order_price"></span></td>
+						<td><span id="menu_qty"></span></td>
+						<td><span data-prefix>Rs.</span><span id="menu_ammount"></span></td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<table class="balance">
+				<tr>
+					<th><span contenteditable>Sub Total</span></th>
+					<td><span data-prefix>Rs.</span><span id="sub_total"></span></td>
+				</tr>
+				<tr>
+					<th><span contenteditable>Discount(0%)</span></th>
+					<td><span data-prefix></span><span contenteditable id="discount">.00</span></td>
+				</tr>
+				<tr>
+					<th><span contenteditable>Grand Total</span></th>
+					<td><span data-prefix>Rs.</span ><span id="grand_total"></span ></td>
+				</tr>
+                
+			</table>
+		</article>
+		<aside>
+			<div contenteditable>
+				</div>
+		</aside>
+		<script src="example.js"></script>
+        
+
+	</body>
+</html>

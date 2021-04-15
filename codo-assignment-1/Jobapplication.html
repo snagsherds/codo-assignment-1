@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+    <script>
+   $("#submitForm").click(function() {
+   alert("The Form has been Submitted.");
+});
+
+        function validateForm() {
+          var x = document.forms["myForm"]["fullname"].value;
+          var y = document.forms["myForm"]["Age"].value;
+          var z = document.getElementById("myRadio").required;
+          document.getElementById("myRadio").innerHTML = z;
+          var z1 = document.getElementById('batch');
+          var z2 = document.forms["myForm"]["textarea"].value; 
+          if (x == "" || x == null) {
+            alert("Name must be filled out");
+            return false;
+          }
+          else if (y == "" || y == null) {
+            alert("Age must be filled out");
+            return false;
+          }
+          if (x == "" || x == null) {
+            alert("Tell us about yourself!!");
+            return false;
+          }
+          else if (z1.value) {
+            return true;
+          }
+           return false;
+          
+        }
+        </script>
+<title>Job Application</title>
+<link rel="stylesheet" href="Jobapplication.css">
+</head>
+<body>
+    <h2>Job application</h2>
+    <form name="myForm" class="form-inline" action="finalpage.html" onsubmit=" return validateForm() " method="post" required>
+        <label for="fullname">Full Name:</label>
+        <input type="fullname" id="fullname" placeholder="Enter full name" name="fullname">
+        <label for="Age">Age:</label>
+        <input type="number" id="Age" placeholder="Enter Age" name="Age">
+        <label style="margin-left: 20px;"for="Gender">Gender: </label>
+        <input type="radio" id="myRadio" name="gender" value="male" required>
+        <label for="male">Male</label><br>
+        <input type="radio" id="myRadio" name="gender" value="female" required>
+        <label for="female">Female</label><br>
+        <input type="radio" id="myRadio" name="gender" value="other" required>
+        <label for="other">Other</label>
+    <label style="margin-left: 50px;"for="batch">Qualification: </label> 
+    <select name="batch" id="batch" required>
+        <option value="" required>NONE</option>
+        <option value="BTECH" >BTECH</option>
+        <option value="BSC" >BSC</option>
+        <option value="MTECH" >MTECH</option>
+        <option value="MSC" >MSC</option>
+        <option value="BCA" >BCA</option>
+        <option value="MCA" >MCA</option>
+      </select>
+      <br>
+      <textarea id="textarea" name="textarea" rows="4" cols="50" required>  
+    </textarea>
+<label style="margin-left: 20px;"for="Gender">Upload resume: </label> 
+<div style="margin-top: 5px;">
+    <input type="file" id="myFile" name="filename">
+</div>
+
+<button id="submitForm" style="margin-top: 5px;" type="submit">Submit</button>
+</form>
+</body>
+</html>
